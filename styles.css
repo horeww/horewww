@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background-color: black;
+  background: linear-gradient(-45deg, #1b1b1b, #530a0a, #29093b);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+.main-tag{
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  position: absolute;
+  top: 300px;
+  font-family: "ABeeZee", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  margin: 0 0 20px 0;
+  margin-bottom: 20px;
+  word-break: break-word;
+  color: #fff;
+  text-align: center;
+}
+
+.name-icon{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  font-family: "ABeeZee", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 42px;
+  text-align: center;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.divider{
+  width: 1px;
+  height: 20px; 
+  background-color: #fff; 
+}
+
+.divider:last-of-type{
+  display: none;
+}
+
+#clock{
+  color: #fff;
+  margin-top: 20px;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  position: absolute;
+  top: 550px;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.adaptive{
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+}
+
+@media(max-width:1200px){
+  .adaptive{
+    width: 100%;
+    grid-template-columns: 1fr 280px;
+  }
+}
+
+@media(max-width:1000px){
+  .adaptive{
+    width: 768px;
+    grid-template-columns: 1fr 250px;
+  }
+}
+
+@media(max-width:768px){
+  .adaptive{
+    width: 48px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 100px;
+    text-align: center;
+  }
+}
+
+@media(max-width:480px){
+  .adaptive{
+    width: 100%;
+  }
+  h1{
+    font-size: 36px;
+    text-align: center;
+  }
+  .name-icon{
+    font-size: 20px;
+  }
+}
